@@ -20,9 +20,9 @@ module.exports = {
 
   request: function(url, method, postdata) {
     this.url = url;
-    this.method = method;
+    this.method = method; // post or get
     this._postData = postdata;
-    this.setEncoding = function() { /* noop */ };
+    this.setEncoding = function() { /*noop*/ };
 
     this.addListener = this.on = function(type, callback) {
       if (type === 'data') {
